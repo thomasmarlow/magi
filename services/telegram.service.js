@@ -78,7 +78,7 @@ module.exports = {
 	 * Methods
 	 */
 	methods: {
-		notify.owner: {
+		notify: {
 			rest: {
 				method: "POST",
 				path: "/notify"
