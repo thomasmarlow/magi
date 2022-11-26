@@ -111,9 +111,15 @@ module.exports = {
                                 'chat': msg.chat,
                                 'text': msg.text
                         })
+                        if (msg.chat.id != process.env.OWNER_TELEGRAM_CHAT_ID) {
+                                bot.sendMessage(
+                                    process.env.OWNER_TELEGRAM_CHAT_ID,
+                                    `@${msg.chat.username}: "${msg.text}"`
+                                )
+                        }
 
                         // send a message to the chat acknowledging receipt of their message
-                        bot.sendMessage(chatId, 'Received your message');
+                        bot.sendMessage(chatId, 'nice');
               });
 	},
 
