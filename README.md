@@ -6,6 +6,16 @@ _Tailor-made personal assistant._
 
 > This is a [Moleculer](https://moleculer.services/)-based microservices project. Generated with the [Moleculer CLI](https://moleculer.services/docs/0.14/moleculer-cli.html).
 
+## TODO
+
+- ~~[Create Moleculer project](https://moleculer.services/docs/0.14/usage.html#Create-a-Moleculer-project)~~
+- ~~[Add simple Telegram bot service](https://github.com/yagop/node-telegram-bot-api)~~
+- Switch from polling to webhooks:
+  - [Basic setup](https://github.com/yagop/node-telegram-bot-api/blob/master/doc/usage.md#webhooks)
+  - [Example with Express](https://github.com/yagop/node-telegram-bot-api/blob/master/examples/webhook/express.js)
+- Add some DB functionality
+- [Add Discord bot service](https://discord.js.org/#/)
+
 ## Usage
 
 Start the project with `npm run dev` command. 
@@ -35,18 +45,8 @@ In the terminal, try the following commands:
 - `npm run dc:up`: Start the stack with Docker Compose
 - `npm run dc:down`: Stop the stack with Docker Compose
 
-## TODO
-
-- [Create Moleculer project](https://moleculer.services/docs/0.14/usage.html#Create-a-Moleculer-project)
-- [Add simple Telegram bot service](https://github.com/yagop/node-telegram-bot-api)
-- Switch from polling to webhooks:
-  - [Basic setup](https://github.com/yagop/node-telegram-bot-api/blob/master/doc/usage.md#webhooks)
-  - [Example with Express](https://github.com/yagop/node-telegram-bot-api/blob/master/examples/webhook/express.js)
-- Add some DB functionality
-- [Add Discord bot service](https://discord.js.org/#/)
-
 ## Useful links
 
-- Moleculer website: https://moleculer.services/
-- Moleculer Documentation: https://moleculer.services/docs/0.14/
+- [Moleculer website](https://moleculer.services/)
+- [Moleculer Documentation](https://moleculer.services/docs/0.14/)
 - [Awesome Moleculer](https://github.com/moleculerjs/awesome-moleculer)
