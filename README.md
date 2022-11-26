@@ -1,10 +1,6 @@
 # magi
 Tailor-made personal assistant
 
-## Useful resources
-
-- [Awesome Moleculer](https://github.com/moleculerjs/awesome-moleculer)
-
 ## TODO
 
 - [Create Moleculer project](https://moleculer.services/docs/0.14/usage.html#Create-a-Moleculer-project)
@@ -14,3 +10,7 @@ Tailor-made personal assistant
   - [Example with Express](https://github.com/yagop/node-telegram-bot-api/blob/master/examples/webhook/express.js)
 - Add some DB functionality
 - [Add Discord bot service](https://discord.js.org/#/)
+
+## Useful resources
+
+- [Awesome Moleculer](https://github.com/moleculerjs/awesome-moleculer)
