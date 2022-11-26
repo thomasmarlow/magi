@@ -25,8 +25,11 @@
     "moleculer-repl": "^0.6.6"
   },
   "dependencies": {
+    "dotenv": "^16.0.3",
+    "dotenv-expand": "^9.0.0",
+    "moleculer": "^0.14.16",
     "moleculer-web": "^0.10.2",
-    "moleculer": "^0.14.16"
+    "node-telegram-bot-api": "^0.60.0"
   },
   "engines": {
     "node": ">= 12.x.x"
