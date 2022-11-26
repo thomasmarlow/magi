@@ -81,7 +81,7 @@ module.exports = {
 		notify: {
 			rest: {
 				method: "POST",
-				path: "/notify"
+				path: "/notify",
                                 params: {
                                         message: "string"
                                 },
