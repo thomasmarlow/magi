@@ -44,10 +44,11 @@ module.exports = {
                         },
 			async handler(ctx) {
                                 this.bot.sendMessage(
-                                    process.env.OWNER_TELEGRAM_CHAT_ID,
-                                    `${ctx.params.message}\n_fired by MAGI notifications_`,
-                                    { parse_mode: 'HTML' }
+                                        process.env.OWNER_TELEGRAM_CHAT_ID,
+                                        `${ctx.params.message}\n\n_fired by MAGI notifications_`,
+                                        { parse_mode: 'Markdown' }
                                 )
+                                return 'ok'
 			}
 		},
 	},
@@ -63,17 +64,24 @@ module.exports = {
 	 * Methods
 	 */
 	methods: {
+
 	},
 
 	/**
 	 * Service created lifecycle event handler
 	 */
 	created() {
-                // const bot = new TelegramBot('5953851251:AAHStdZPhs5IjM9iUINALBn75KbUl-FR12s', {polling: true});
-                const bot = new TelegramBot(process.env.TELEGRAM_BOT_TOKEN, {polling: true});
+
+	},
+
+	/**
+	 * Service started lifecycle event handler
+	 */
+	async started() {
+                this.bot = new TelegramBot(process.env.TELEGRAM_BOT_TOKEN, {polling: true});
 
                 // Matches "/echo [whatever]"
-                bot.onText(/\/echo (.+)/, (msg, match) => {
+                this.bot.onText(/\/echo (.+)/, (msg, match) => {
                         // 'msg' is the received Message from Telegram
                         // 'match' is the result of executing the regexp above on the text content
                         // of the message
@@ -87,7 +95,7 @@ module.exports = {
 
                 // Listen for any kind of message. There are different kinds of
                 // messages.
-                bot.on('message', (msg) => {
+                this.bot.on('message', (msg) => {
                         const chatId = msg.chat.id;
 
                         // this.logger.info('incoming tg message', msg)
@@ -105,21 +113,12 @@ module.exports = {
                         // send a message to the chat acknowledging receipt of their message
                         bot.sendMessage(chatId, 'nice');
                 });
-
-                this.bot = bot
-	},
-
-	/**
-	 * Service started lifecycle event handler
-	 */
-	async started() {
-
 	},
 
 	/**
 	 * Service stopped lifecycle event handler
 	 */
 	async stopped() {
-
+                this.bot.stopPolling()
 	}
 };
