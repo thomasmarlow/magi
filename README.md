@@ -8,3 +8,5 @@ Tailor-made personal assistant
 - Switch from polling to webhooks:
   - [Basic setup](https://github.com/yagop/node-telegram-bot-api/blob/master/doc/usage.md#webhooks)
   - [Example with Express](https://github.com/yagop/node-telegram-bot-api/blob/master/examples/webhook/express.js)
+- Add some DB functionality
+- [Add Discord bot service](https://discord.js.org/#/)
