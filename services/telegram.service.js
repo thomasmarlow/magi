@@ -34,50 +34,6 @@ module.exports = {
 	 * Actions
 	 */
 	actions: {
-
-		// /**
-		//  * Say a 'Hello' action.
-		//  *
-		//  * @returns
-		//  */
-		// hello: {
-		// 	rest: {
-		// 		method: "GET",
-		// 		path: "/hello"
-		// 	},
-		// 	async handler() {
-		// 		return "Hello Moleculer";
-		// 	}
-		// },
-
-		// /**
-		//  * Welcome, a username
-		//  *
-		//  * @param {String} name - User name
-		//  */
-		// welcome: {
-		// 	rest: "/welcome",
-		// 	params: {
-		// 		name: "string"
-		// 	},
-		// 	/** @param {Context} ctx  */
-		// 	async handler(ctx) {
-		// 		return `Welcome, ${ctx.params.name}`;
-		// 	}
-		// }
-	},
-
-	/**
-	 * Events
-	 */
-	events: {
-
-	},
-
-	/**
-	 * Methods
-	 */
-	methods: {
 		notify: {
 			rest: {
 				method: "POST",
@@ -93,6 +49,19 @@ module.exports = {
                                 )
 			}
 		},
+	},
+
+	/**
+	 * Events
+	 */
+	events: {
+
+	},
+
+	/**
+	 * Methods
+	 */
+	methods: {
 	},
 
 	/**
