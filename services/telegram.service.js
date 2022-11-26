@@ -45,8 +45,8 @@ module.exports = {
 			async handler(ctx) {
                                 this.bot.sendMessage(
                                     process.env.OWNER_TELEGRAM_CHAT_ID,
-                                    `${ctx.params.message}\n__fired by MAGI notifications__`,
-                                    { parseMode: 'Markdown' }
+                                    `${ctx.params.message}\n<i>fired by MAGI notifications</i>`,
+                                    { parseMode: 'HTML' }
                                 )
 			}
 		},
