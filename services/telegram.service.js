@@ -42,10 +42,10 @@ module.exports = {
                                         message: "string"
                                 },
 			},
-			async handler() {
+			async handler(ctx) {
                                 this.bot.sendMessage(
                                     process.env.OWNER_TELEGRAM_CHAT_ID,
-                                    message
+                                    ctx.params.message
                                 )
 			}
 		},
