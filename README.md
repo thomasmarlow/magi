@@ -1,6 +1,10 @@
 # magi
 Tailor-made personal assistant
 
+## Useful resources
+
+- [Awesome Moleculer](https://github.com/moleculerjs/awesome-moleculer)
+
 ## TODO
 
 - [Create Moleculer project](https://moleculer.services/docs/0.14/usage.html#Create-a-Moleculer-project)
