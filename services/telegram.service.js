@@ -38,10 +38,10 @@ module.exports = {
 			rest: {
 				method: "POST",
 				path: "/notify",
-                                params: {
-                                        message: "string"
-                                },
 			},
+                        params: {
+                                message: "string"
+                        },
 			async handler(ctx) {
                                 this.bot.sendMessage(
                                     process.env.OWNER_TELEGRAM_CHAT_ID,
