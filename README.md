@@ -47,6 +47,6 @@ In the terminal, try the following commands:
 
 ## Useful links
 
-* Moleculer website: https://moleculer.services/
-* Moleculer Documentation: https://moleculer.services/docs/0.14/
+- Moleculer website: https://moleculer.services/
+- Moleculer Documentation: https://moleculer.services/docs/0.14/
 - [Awesome Moleculer](https://github.com/moleculerjs/awesome-moleculer)
