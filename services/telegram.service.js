@@ -43,7 +43,7 @@ module.exports = {
                                 },
 			},
 			async handler() {
-                                bot.sendMessage(
+                                this.bot.sendMessage(
                                     process.env.OWNER_TELEGRAM_CHAT_ID,
                                     message
                                 )
@@ -103,7 +103,9 @@ module.exports = {
 
                         // send a message to the chat acknowledging receipt of their message
                         bot.sendMessage(chatId, 'nice');
-              });
+                });
+
+                this.bot = bot
 	},
 
 	/**
