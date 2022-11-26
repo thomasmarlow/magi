@@ -78,10 +78,10 @@ module.exports = {
 	 * Service started lifecycle event handler
 	 */
 	async started() {
-                this.bot = new TelegramBot(process.env.TELEGRAM_BOT_TOKEN, {polling: true});
+                const bot = new TelegramBot(process.env.TELEGRAM_BOT_TOKEN, {polling: true});
 
                 // Matches "/echo [whatever]"
-                this.bot.onText(/\/echo (.+)/, (msg, match) => {
+                bot.onText(/\/echo (.+)/, (msg, match) => {
                         // 'msg' is the received Message from Telegram
                         // 'match' is the result of executing the regexp above on the text content
                         // of the message
@@ -95,7 +95,7 @@ module.exports = {
 
                 // Listen for any kind of message. There are different kinds of
                 // messages.
-                this.bot.on('message', (msg) => {
+                bot.on('message', (msg) => {
                         const chatId = msg.chat.id;
 
                         // this.logger.info('incoming tg message', msg)
@@ -113,6 +113,8 @@ module.exports = {
                         // send a message to the chat acknowledging receipt of their message
                         bot.sendMessage(chatId, 'nice');
                 });
+
+                this.bot = bot
 	},
 
 	/**
