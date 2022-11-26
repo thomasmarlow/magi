@@ -78,7 +78,21 @@ module.exports = {
 	 * Methods
 	 */
 	methods: {
-
+		notify.owner: {
+			rest: {
+				method: "POST",
+				path: "/notify"
+                                params: {
+                                        message: "string"
+                                },
+			},
+			async handler() {
+                                bot.sendMessage(
+                                    process.env.OWNER_TELEGRAM_CHAT_ID,
+                                    message
+                                )
+			}
+		},
 	},
 
 	/**
